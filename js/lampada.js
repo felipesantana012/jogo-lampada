@@ -9,12 +9,16 @@ const sortearInterruptor = () =>  {
     return interruptor;
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    window.interruptor = sortearInterruptor();
+});
+
+
 
 const acendeApaga = () => {
     const lampada = document.getElementById("lampada");
     const lampadaDesligada = "img/lampadaDesligada.jpg";
     const lampadaLigada = "img/lampadaLigada.jpg";
-    const interruptor = sortearInterruptor();
  
     if(interruptor.checked){
         lampada.src = lampadaLigada;
