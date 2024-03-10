@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 :root{
     --branco: #ffff;
@@ -7,33 +12,32 @@
     --fonte-secundaria:"Josefin Sans";
 }
 
-body{
-    background-color:var(--branco);
-}
 
+body{
+    height: 100vh;
+   
+}
 
 .cabecalho{
     display: flex;
     flex-direction: column;
+    width: 100%;
     align-items: center;
     background: var(--amarelo-degrade);
-    margin-bottom: 1em;
-    
+    text-align: center;
+    padding: 1em;
 }
 
 .cabecalho__titulo{
-    font-size: 25px;
-    padding: 0.5em;
     font-family: var( --fonte-principal);
-    
 }
 
 .cabecalho__paragrafo{
-    font-size: 16px;
-    padding: 0 3em 0 3em;
-    margin-bottom: 1em;
-    margin-top: 0.3em;
     font-family: var(--fonte-secundaria);
+}
+
+#resposta{
+    display: none;
 }
 
 .cabecalho__resposta_titulo{
@@ -42,58 +46,86 @@ body{
     cursor: pointer;
 }
 
-#resposta{
-    display: none;
-}
-
 #mensagemQuente{
     display: none;
     margin-bottom: 0.5em;
     background-color: var(--laranja);
     font-family: var( --fonte-principal);
+    font-size: 12px;
 }
+
+.lateral-esquerda{
+    background-color: var(--branco);
+    height: 80%;
+    width: 10%;
+    float: left;
+    text-align: center;
+}
+
 
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0.5em;
+    width: 80%;
+    height: 80%;
+    background-color:var(--branco);
+    float: left;
+    text-align: center;
 }
 
 .container__input{
     display: flex;
-    padding: 0 3em 0 3em;
-    
+    flex-direction: column;
+   
+}
+
+
+.container__interruptores{
+    padding: 1em;
+
+}
+
+.container__interruptores{
+    display: flex;
+    flex-direction: row;  
 }
 
 .container__input_interruptor{
+    margin-left: 1em;
+}
+
+.container__label_interruptor{
+    margin-left: 1em;
     display: flex;
-    margin-right: 3em;
-    padding: 10px;
+    flex-direction: row;
 }
 
 .container__imagem {
-    width: 240px;
-    display:none  
+    width: 180px;
+    display:none  ;
+    margin-bottom: 20px;
+
 }
 
 .container__imagem_porta{
-    width: 180px;
-    margin-bottom: 10px;
+    width: 160px;
 }
 
 
 .container__butoes{
-    display: flex;
-
+    margin-bottom: 1em;
+    
 }
 
 .container__butao{
-    padding: 5px;
+    padding: 4px;
     border-radius: 10px;
     border-color: transparent;
     background:var(--amarelo-degrade);
     cursor: pointer;
-    margin: 1px 10px 0px 10px;
+    margin-bottom: 0.2em;
 }
 
 .container__butao:hover{
@@ -101,19 +133,30 @@ body{
 }
 
 
-.rodape{
+.lateral-direita{
+    height: 80%;
+    width: 10%;
+    background-color: var(--branco);
+    float: left;
+    text-align: center;
+}
 
-    position: fixed;
+.rodape{
     bottom: 0;
+    clear: both;
+    background: var(--amarelo-degrade);
     width: 100%;
-    background:var(--amarelo-degrade);
-    text-align: center;  
-   
+    height: 10%;
+    text-align: center;
 }
 
 .rodape__link{
-    width: 40px;
+    width: 50px;
     padding: 8px; 
 }
+
+
+
+
 
 

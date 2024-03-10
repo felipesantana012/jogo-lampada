@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 04</title>
-    <link rel="stylesheet" href="styles/reset.css">
+    <title>Jogo Da Lampada</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <script src="js/lampada.js"></script>
+    <script src="testando.js"></script>
 </head>
-
 <body>
-
     <header class="cabecalho">
         <h1 class="cabecalho__titulo">Exericio 04</h1>
         <p class="cabecalho__paragrafo">
@@ -34,41 +30,53 @@
        
     </header>
 
-
-
+    <div class="lateral-esquerda"> </div>
 
     <main class="container">
+       
         <div class="container__input">
 
-            <input type="checkbox" id="interruptor01" name="interruptores" onchange="acendeApaga()" >
-            <label for="interruptor01" class="container__input_interruptor">Interruptor 01</label><br>
+           <div class="container__titulo">
+            <h2 class="container__titulo-h2" >Interruptores</h2>
+           </div>
 
-            <input type="checkbox" id="interruptor02" name="interruptores" onchange="acendeApaga()" >
-            <label for="interruptor02" class="container__input_interruptor">Interruptor 02</label><br>
+            <div class="container__interruptores">
+            <div class="container__interruptore">
+            <label for="interruptor01" class="container__label_interruptor">01</label>
+            <input type="checkbox" id="interruptor01" name="interruptores" class="container__input_interruptor" onchange="acendeApaga()" >
+            </div>
 
-            <input type="checkbox" id="interruptor03" name="interruptores" onchange="acendeApaga()" >
-            <label for="interruptor03" class="container__input_interruptor">Interruptor 03</label><br>
+            <div class="container__interruptore">
+            <label for="interruptor02" class="container__label_interruptor">02</label>
+            <input type="checkbox" id="interruptor02" name="interruptores" class="container__input_interruptor" onchange="acendeApaga()" >
+            </div>
+
+            <div class="container__interruptore">
+            <label for="interruptor03" class="container__label_interruptor">03</label>
+            <input type="checkbox" id="interruptor03" name="interruptores" class="container__input_interruptor" onchange="acendeApaga()" >
+            </div>
+            </div>
+
         </div>
 
-        
+        <div class="container__imagens">
         <img src="img/lampadaDesligada.jpg" alt="Uma Lampada Desligada" id="lampada" class="container__imagem">
         <img src="img/Porta Fechada.png" alt="Uma porta Fechada"  id="porta" class="container__imagem_porta" >
         <div id="mensagemQuente" >A lampada esta fria</div>
-        
+        </div>
+
         <div class="container__butoes">
         <button class="container__butao" onclick="abrirPorta()">Abrir Porta</button>
         <button class="container__butao" onclick="fecharPorta()">Fechar Porta</button>
-        
+        </div>
     </main>
 
-   
+    <div class="lateral-direita"> </div>
+
     <footer class="rodape">
         <a href="https://github.com/felipesantana012" target="_blank"><img src="img/Logo Git.png" class="rodape__link" alt="Logo do Git"></a>
         <a href="https://linkedin.com/in/felipesantana012" target="_blank"><img src="img/Logo Linkedin.png"  class="rodape__link" alt="Logo do Linkedin"></a>
         <a href="https://wa.me/5581988742454?text=Ola%20Felipe!" target="_blank"><img src="img/Logo Whatsapp.png" class="rodape__link" alt="Logo do WhatsApp"></a>
     </footer>
-
-
 </body>
-
 </html>
