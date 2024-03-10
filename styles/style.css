@@ -29,11 +29,14 @@ body{
 }
 
 .cabecalho__titulo{
+
     font-family: var( --fonte-principal);
 }
 
 .cabecalho__paragrafo{
+    margin: 0 2em 0 2em;
     font-family: var(--fonte-secundaria);
+    
 }
 
 #resposta{
