@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 04</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="js/lampada.js"></script>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <h1 class="cabecalho__titulo">Exericio 04</h1>
+        <p class="cabecalho__paragrafo">
+            4) Você está em uma sala com três interruptores, cada um conectado a uma lâmpada
+            em uma sala diferente. Você
+            não pode ver as lâmpadas da sala em que está, mas pode ligar e desligar os interruptores quantas vezes
+            quiser. Seu objetivo é descobrir qual interruptor controla qual lâmpada.
+            Como você faria para descobrir, usando apenas duas idas até uma das salas das lâmpadas, qual interruptor
+            controla cada lâmpada?
+        </p>
+        <label for="verResposta" >
+        <h2 class="cabecalho__resposta_titulo" id="verResposta" onclick="resposta()">Click Aqui Para Ver a Resposta</h2>
+        </label>
+        <p class="cabecalho__paragrafo" id="resposta">
+            Para identificar qual interruptor acende a luz em até duas tentativas, você primeiro precisa acionar um dos interruptores e, em seguida, verificar se a luz está acesa abrindo a porta. Se a luz não acender, você pode tentar pressionar o outro interruptor e aguardar um momento antes de abrir a porta novamente. Ao passar o mouse sobre a lâmpada, você pode sentir se ela está quente. Se estiver quente, significa que o interruptor que você acabou de pressionar é o correto. Se a lâmpada estiver fria, a resposta correta é o outro interruptor que você não pressionou. Este método permite identificar o interruptor correto com eficiência, limitando-se a apenas duas tentativas.</p>
+       
+    </header>
+
+
+
+
+    <main class="container">
+        <div class="container__input">
+
+            <input type="checkbox" id="interruptor01" name="interruptores" onchange="acendeApaga()" >
+            <label for="interruptor01" class="container__input_interruptor">Interruptor 01</label><br>
+
+            <input type="checkbox" id="interruptor02" name="interruptores" onchange="acendeApaga()" >
+            <label for="interruptor02" class="container__input_interruptor">Interruptor 02</label><br>
+
+            <input type="checkbox" id="interruptor03" name="interruptores" onchange="acendeApaga()" >
+            <label for="interruptor03" class="container__input_interruptor">Interruptor 03</label><br>
+        </div>
+
+        
+        <img src="img/lampadaDesligada.jpg" alt="Uma Lampada Desligada" id="lampada" class="container__imagem">
+        <img src="img/Porta Fechada.png" alt="Uma porta Fechada"  id="porta" class="container__imagem_porta" >
+        <div id="mensagemQuente" >A lampada esta fria</div>
+        
+        <div class="container__butoes">
+        <button class="container__butao" onclick="abrirPorta()">Abrir Porta</button>
+        <button class="container__butao" onclick="fecharPorta()">Fechar Porta</button>
+        
+    </main>
+
+   
+
+
+</body>
+
+</html>
