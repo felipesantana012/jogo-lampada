@@ -1,11 +1,22 @@
 
+:root{
+    --branco: #ffff;
+    --laranja: #ebdb00;
+    --amarelo-degrade: linear-gradient(97.54deg, #fdff9c 35.42%, #e0ec2f 165.37%);
+    --fonte-principal: "Poppins";
+    --fonte-secundaria:"Josefin Sans";
+}
+
+body{
+    background-color:var(--branco);
+}
 
 
 .cabecalho{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(245, 234, 155);
+    background: var(--amarelo-degrade);
     margin-bottom: 1em;
     
 }
@@ -13,6 +24,7 @@
 .cabecalho__titulo{
     font-size: 25px;
     padding: 0.5em;
+    font-family: var( --fonte-principal);
     
 }
 
@@ -21,6 +33,7 @@
     padding: 0 3em 0 3em;
     margin-bottom: 1em;
     margin-top: 0.3em;
+    font-family: var(--fonte-secundaria);
 }
 
 .cabecalho__resposta_titulo{
@@ -36,7 +49,8 @@
 #mensagemQuente{
     display: none;
     margin-bottom: 0.5em;
-    background-color: rgb(238, 255, 0);
+    background-color: var(--laranja);
+    font-family: var( --fonte-principal);
 }
 
 .container{
@@ -47,12 +61,14 @@
 
 .container__input{
     display: flex;
+    padding: 0 3em 0 3em;
     
 }
 
 .container__input_interruptor{
     display: flex;
-   margin-right: 3em;
+    margin-right: 3em;
+    padding: 10px;
 }
 
 .container__imagem {
@@ -61,26 +77,43 @@
 }
 
 .container__imagem_porta{
-    width: 200px;
+    width: 180px;
+    margin-bottom: 10px;
 }
 
 
 .container__butoes{
     display: flex;
-    
+
 }
 
 .container__butao{
-    padding: 4px;
+    padding: 5px;
     border-radius: 10px;
     border-color: transparent;
-    background-color:rgb(243, 227, 110);
+    background:var(--amarelo-degrade);
     cursor: pointer;
-    margin: 1px 10px 0px 0px;
-   
+    margin: 1px 10px 0px 10px;
 }
 
 .container__butao:hover{
-    background-color: rgb(177, 167, 95);
+    background:var(--laranja)
 }
+
+
+.rodape{
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background:var(--amarelo-degrade);
+    text-align: center;  
+   
+}
+
+.rodape__link{
+    width: 40px;
+    padding: 8px; 
+}
+
 

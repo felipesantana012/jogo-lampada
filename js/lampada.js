@@ -1,3 +1,4 @@
+
 const sortearInterruptor = () =>  {
     const interruptor01 = document.getElementById("interruptor01");
     const interruptor02 = document.getElementById("interruptor02");
@@ -68,3 +69,8 @@ const mensagemFrioOuQuente = (mensagem) => {
         mensagemQuente.style.display = 'none';
     })
 }
+
+  
+
+
+
