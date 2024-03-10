@@ -1,33 +1,43 @@
-let lampadaDesligada = "img/lampadaDesligada.jpg";
-let lampadaLigada = "img/lampadaLigada.jpg";
+const sortearInterruptor = () =>  {
+    const interruptor01 = document.getElementById("interruptor01");
+    const interruptor02 = document.getElementById("interruptor02");
+    const interruptor03 = document.getElementById("interruptor03");
+    const num = [interruptor01, interruptor02 , interruptor03];
+    const indice = Math.floor(Math.random() * num.length);
+    const interruptor = num[indice];
+    return interruptor;
+}
 
 
-function acendeApaga() {
-    let lampada = document.getElementById("lampada");
-    let interruptor03 = document.getElementById("interruptor03");
-    if(interruptor03.checked){
+const acendeApaga = () => {
+    const lampada = document.getElementById("lampada");
+    const lampadaDesligada = "img/lampadaDesligada.jpg";
+    const lampadaLigada = "img/lampadaLigada.jpg";
+    const interruptor = sortearInterruptor();
+ 
+    if(interruptor.checked){
         lampada.src = lampadaLigada;
         quenteOuFrio();
     }else {
-        lampada.src = lampadaDesligada;
-        
+        lampada.src = lampadaDesligada;    
     }  
 }
 
 
-function abrirPorta(){
+const abrirPorta = () =>{
     document.getElementById('lampada').style.display = 'block';
     document.getElementById('porta').style.display = 'none';
 }
 
-function fecharPorta(){
+
+const fecharPorta = () =>{
     document.getElementById('lampada').style.display = 'none';
     document.getElementById('porta').style.display = 'block';
 }
 
 
-function resposta(){
-     let resposta = document.getElementById('resposta');
+const resposta = () =>{
+     const resposta = document.getElementById('resposta');
 
      if(resposta.style.display === 'none'){
         resposta.style.display = 'block';
@@ -36,19 +46,19 @@ function resposta(){
      } 
 }
 
+
 let cont = 0;
-function quenteOuFrio(){
+const quenteOuFrio = () =>{
     cont += 1;
     if(cont>0){
         mensagemFrioOuQuente("A lampada esta Quente");
-    }
-    
+    }  
 }
 
 
-function mensagemFrioOuQuente(mensagem){
-    let lampada = document.getElementById("lampada");
-    let mensagemQuente = document.getElementById('mensagemQuente');
+const mensagemFrioOuQuente = (mensagem) => {
+    const lampada = document.getElementById("lampada");
+    const mensagemQuente = document.getElementById('mensagemQuente');
     lampada.addEventListener('mouseover' , function (){
         mensagemQuente.textContent = mensagem;
         mensagemQuente.style.display = 'block';
@@ -58,8 +68,3 @@ function mensagemFrioOuQuente(mensagem){
         mensagemQuente.style.display = 'none';
     })
 }
-
-  
-
-
-
